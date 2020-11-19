@@ -1,0 +1,31 @@
+.example-container{ 
+    height: 850px;
+    border-radius: 5px;
+    margin: 0.5em;
+}
+mat-drawer{ 
+    padding: 3%;
+} 
+.sidemenu ul li{
+    list-style-type: none; 
+    font-size: 17pt; 
+    margin-bottom: 20%; 
+}
+.sidemenu ul li:hover{
+    cursor: pointer;
+}
+.example-container{
+    border:1px solid lightgray ;
+}
+span:hover{
+    cursor: pointer;
+}
+mat-drawer-content{
+    text-align: center;
+}
+li:focus{ 
+   display: inline-block;  
+} 
+.sidemenu ul{
+    margin-top: 50%;
+}

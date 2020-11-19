@@ -1,0 +1,13 @@
+
+<mat-drawer-container class="example-container">
+  <mat-drawer class="sidemenu"  mode="side" opened> 
+      <ul>
+          <li [routerLink]="['/home/faculties']"><b><i class="fa fa-puzzle-piece"> </i> FACULTIES</b></li>
+          <li [routerLink]="['/home/programmes']"><b> <i class="fa fa-copy"></i> PROGRAMMES</b></li>
+          <li [routerLink]="['/home/startups']"><b> <i class="fa fa-th-large"></i> START-UPS</b></li>
+          <li [routerLink]="['/home/beneficiaries']"><b> <i class="fa fa-users"></i> BENEFICIARIES</b></li>
+          <li [routerLink]="['/home/reports']"><b> <i class="fa fa-bar-chart"></i> REPORTS</b></li>
+      </ul>
+  </mat-drawer>
+  <mat-drawer-content> <router-outlet></router-outlet> </mat-drawer-content>
+</mat-drawer-container> 

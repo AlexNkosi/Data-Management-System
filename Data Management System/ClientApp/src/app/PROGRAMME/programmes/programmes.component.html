@@ -1,0 +1,52 @@
+<h3><b>MANAGE PROGRAMMES</b></h3>
+<div class="card">
+    <div class='card-header '>
+        <button type="button" class="btn btn-dark" [routerLink]="['/home/addprogramme']">ADD A NEW PROGRAMME</button>
+      </div>
+    <div class="card-body">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+          
+            <!-- Faculty name Column -->
+            <ng-container matColumnDef="programmeName">
+              <th mat-header-cell *matHeaderCellDef> <b>NAME</b> </th>
+              <td style="text-align: start;" mat-cell *matCellDef="let element"> {{element.programmeName}} </td>
+            </ng-container>
+          
+            <!-- Faculty type Column -->
+            <ng-container matColumnDef="faculty">
+              <th mat-header-cell *matHeaderCellDef> <b>FACULTY</b> </th>
+              <td style="text-align: start;" mat-cell *matCellDef="let element"> {{element.faculty}} </td>
+            </ng-container>
+          
+            <!-- BEE Level Column -->
+            <ng-container matColumnDef="contract">
+              <th mat-header-cell *matHeaderCellDef> <b>CONTRACT</b> </th>
+              <td style="text-align: start;" mat-cell *matCellDef="let element"> {{element.contract}} </td>
+            </ng-container>
+          
+            <!-- Active Column -->
+            <ng-container matColumnDef="active">
+              <th mat-header-cell *matHeaderCellDef> <b>ACTIVE</b> </th>
+              <td style="text-align: start;"mat-cell *matCellDef="let element"> {{element.active}} </td>
+            </ng-container>
+
+            <!-- Active Column -->
+            <ng-container matColumnDef="startDate">
+                <th mat-header-cell *matHeaderCellDef> <b>START DATE</b> </th>
+                <td style="text-align: start;"mat-cell *matCellDef="let element"> {{element.startDate | date:'shortDate'}} </td>
+            </ng-container>
+
+            <!-- Action Column -->
+            <ng-container matColumnDef="action">
+                <th style="text-align: center;"  mat-header-cell *matHeaderCellDef> <b>Actions</b> </th>
+                <td mat-cell *matCellDef="let element"><button style="width: 30%;" type="button" class="btn btn-outline-info" (click)="edit(element)"> EDIT</button>&ensp;<button style="margin-left: 5%;width: 30%;" type="button" class="btn btn-outline-info" (click)="info(element)"> DETAILS</button></td>
+            </ng-container>
+
+            <tr  mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+    </div>
+  </div>

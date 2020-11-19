@@ -1,0 +1,25 @@
+h3 { 
+    margin-top: 5%;
+    display: inline-block;
+    padding-bottom: 5px;
+    position: relative;
+}
+h3:before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    bottom: 0; 
+    border-bottom: 3px solid black;
+}
+.card{
+    margin: 0.5em; 
+    margin-top: 5%;
+}
+.card-header{
+    text-align: end;
+}
+table {
+    width: 98%;
+    margin: 0.5em;
+  }

@@ -1,0 +1,21 @@
+h3 { 
+    margin-top: 3%;
+    display: inline-block;
+    padding-bottom: 5px;
+    position: relative;
+}
+h3:before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    bottom: 0; 
+    border-bottom: 3px solid black;
+}
+.container{
+    text-align: start;
+    margin-top: 2.5%;
+}
+.form-group{
+    margin: 2.5%;
+}
